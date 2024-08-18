@@ -1,0 +1,49 @@
+<div class="currency-converter">
+  <div class="form-group">
+    <label for="amount1">Currency 1</label>
+    <input
+      id="amount1"
+      type="number"
+      [(ngModel)]="amount1"
+      (focus)="onFocus('amount1')"
+      (input)="calculateConversion1()"
+    />
+    <div class="currency-select">
+      <span class="currency-symbol">{{ getCurrencySymbol(currency1) }}</span>
+      <select
+        id="currency1"
+        name="currency1"
+        [(ngModel)]="currency1"
+        (change)="updateExchangeRate()"
+      >
+        <option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="amount2">Currency 2</label>
+    <input
+      id="amount2"
+      type="number"
+      [(ngModel)]="amount2"
+      (focus)="onFocus('amount2')"
+      (input)="calculateConversion2()"
+    />
+    <div class="currency-select">
+      <span class="currency-symbol">{{ getCurrencySymbol(currency2) }}</span>
+      <select
+        id="currency2"
+        name="currency2"
+        [(ngModel)]="currency2"
+        (change)="updateExchangeRate()"
+      >
+        <option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: #90afc5;
+}
+
+.currency-converter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #375e97;
+
+  color: #fff;
+  padding: 40px;
+
+  text-align: center;
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .form-group {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      color: #333;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      /* Новый стиль для учета padding */
+    }
+
+    input:focus {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      outline: none;
+      transform: translateY(-2px);
+    }
+  }
+
+  .currency-select {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px; /* Увеличение верхнего отступа */
+    /* Новый стиль для учета padding */
+  }
+
+  .currency-symbol {
+    font-size: 18px;
+    background: #fff;
+    color: #333;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  select {
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 18px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    color: #333;
+    background: #fff;
+    height: 56px;
+    margin-left: -1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  select:focus {
+    outline: none;
+  }
+}
